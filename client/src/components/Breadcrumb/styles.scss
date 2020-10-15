@@ -1,0 +1,13 @@
+@import '../../app/App.scss';
+
+.containerBreadcrumb{
+    display: grid;
+    grid-template-columns: 1.5fr 9fr 1.5fr;
+    padding: $spaceSmall 0;
+}
+
+.containerBreadcrumb .content{
+    grid-column: 2;
+    color: $regularGray;
+    font-size: $fontSize-14;
+}

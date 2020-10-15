@@ -1,0 +1,49 @@
+@import '../../app/App.scss';
+
+.container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 8fr 1.5fr;
+    padding: 10px 0;
+    background-color: $yellow;
+
+    @media only screen and (max-width: 980px) {
+        grid-template-columns: 1.5fr 2fr 7fr 1.5fr;
+    }
+}
+
+.container img.logo{
+    grid-column: 2;
+    max-width: 50px;
+}
+
+.container div{
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: 11.5fr 0.5fr;
+    
+    @media only screen and (max-width: 980px) {
+        grid-template-columns: 11fr 1.5fr;
+    }
+}
+
+.container div input{
+    grid-column: 1;
+    padding: 0 10px;
+    font-size: $fontSize-18;
+}
+
+.container div button{
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    background-color: $superLightGray;
+}
+
+.container input, .container button{
+    border: none;
+    border-radius: none;
+}
+
+.container button img{
+    max-width: 15px;
+}

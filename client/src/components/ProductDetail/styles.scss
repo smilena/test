@@ -1,0 +1,88 @@
+@import '../../app/App.scss';
+
+.containerProductDetail{
+    display: grid;
+    grid-template-columns: 1.5fr 9fr 1.5fr;
+}
+
+.product {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    background-color: $white;
+    padding: $spaceBig;
+}
+
+.product img{
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media only screen and (max-width: 980px) {
+        grid-column: 1/3;
+    }
+}
+
+.product .productData{
+    grid-column: 2;
+    grid-row: 1;
+    @media only screen and (max-width: 980px) {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+}
+
+.productData span{
+    display: block;
+}
+
+.productData .small{
+    font-size: $fontSize-14;
+    margin-bottom: $fontSize-16;
+}
+
+.productData .name{
+    font-size: $fontSize-24;
+    font-weight: bold;
+    margin-bottom: $spaceBig;
+}
+
+.productData .price{
+    font-size: $fontSize-46;
+    margin-bottom: $spaceBig;
+}
+
+.productData input{
+    background-color: $blue;
+    color: $white;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.product .productDescription{
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: $spaceBig;
+    padding-bottom: $spaceBig;
+    overflow-wrap: anywhere;
+
+    @media only screen and (max-width: 980px) {
+        grid-column: 1/3;
+        grid-row: 3;
+        padding-left: 0;
+    }
+}
+
+.product .productDescription h2{
+    font-size: $fontSize-28;
+    margin-bottom: $spaceBig;
+}
+
+.product .productDescription p{
+    font-size: $fontSize-16;
+    color: $lightGray;
+}

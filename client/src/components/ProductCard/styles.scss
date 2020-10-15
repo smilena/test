@@ -1,0 +1,63 @@
+@import '../../app/App.scss';
+
+.containerItem{
+    display: grid;
+    grid-template-columns: 196px 7fr 2fr;
+    height: 180px;
+    padding: $spaceSmall;
+    background-color: $white;
+    border-bottom: solid 1px $superLightGray;
+}
+
+.containerItem>div:nth-child(1){
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerItem>div:nth-child(1) img{
+    grid-column: 1;
+    margin-right: $spaceSmall;
+    border-radius: 4px;
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.containerItem .information{
+    grid-column: 2;
+}
+
+.containerItem .information, .containerItem .place{
+    margin-top: $spaceSmall;
+}
+
+.containerItem .information div:nth-child(1){
+    margin-bottom: $spaceBig;
+}
+
+.containerItem .information, .containerItem  .place{
+    font-size: $fontSize-18;
+}
+
+.containerItem .information span{
+    vertical-align: middle;
+}
+
+.containerItem .information img{
+    display: inline-block;
+    max-width: 20px;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+.containerItem .information .price{
+    font-size: $fontSize-24;
+}
+
+.containerItem .place{
+    font-size: $fontSize-12;
+    color: $lightGray;
+}
+
