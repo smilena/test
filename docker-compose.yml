@@ -1,0 +1,22 @@
+version: "2"
+services:
+    front:
+        container_name: test-front
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        image: vikasraj/awesome_web
+        ports:
+            - "80:80"
+        volumes:
+            - ./client:/usr/src/app
+    back:
+        container_name: test-back
+        build:
+            context: ./server
+            dockerfile: Dockerfile
+        image: vikasraj/awesome_server
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./server:/usr/src/app
